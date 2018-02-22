@@ -2,60 +2,67 @@
 //console.log('fisrt ,javascript')
 //console.log(parseInt(10000000000000000000000008))
 //console.log(parseInt('10000000000000000000000008'))
-function print(str='<hr/>'){
-    document.write(str+'<br/>')
+//本来想用<![CDATA[]],最后发现只是忽略其中的字符串
+//通过replace替代<和>
+//通过eval()显示执行结果
+function print(str){
+     document.write(str.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'  : '+eval(str)+'<br/>')
 }
-function print1(str){
-    document.write(eval('str')+'<br/>')
+
+function printline(str){
+    document.write('<hr/>')
 }
-document.write('typeof null  :' +typeof null +'<br/>')
-document.write('typeof undefined  :' +typeof undefined +'<br/>')
-document.write('typeof 1  :' +typeof  1+'<br/>')
-document.write('typeof \'\' :' +typeof '' +'<br/>')
-document.write('typeof true  :' +typeof true +'<br/>')
-document.write('typeof {}  :' +typeof {} +'<br/>')
-document.write('typeof []  :' +typeof [] +'<br/>')
-document.write('typeof function() {}  :' +typeof function() {} +'<br/>')
-document.write('<hr/>')
+
+print('typeof null')
+print('typeof undefined')
+print('typeof 1')
+print('typeof \'\'')
+print('typeof true')
+print('typeof {}')
+print('typeof []')
+print('typeof function() {} ')
+printline()
+
+
+
 var f1;
 document.write('已声明变量未赋值f1 :'+ typeof f1  +'<br/>')
 document.write('未声明变量f2 :'+ typeof f2  +'<br/>')
 f1=function(){}
 document.write('已声明变量未赋值f1 :'+ typeof f1  +'<br/>')
+print('Number.EPSILON')
+print('Number.MAX_VALUE')
+print('Number.MIN_VALUE')
+print('Number.MAX_SAFE_INTEGER')
+print('Number.MIN_SAFE_INTEGER')
+printline()
+print('0.1+0.2')
+printline()
+
+print('(0.1+0.2-0.3 < Number.EPSILON)')
+print('(0.1+0.2-0.3 > Number.EPSILON)')
+printline()
+print('Number.isFinite(NaN) ')
+print('Number.isFinite(Infinity)')
+print('Number.isNaN(NaN)')
+print('Number.isNaN(Infinity)')
+printline()
+print('Boolean(\'\')')
+print('Boolean(null)')
+print('Boolean(undefined)')
+print('Boolean(0)')
+print('Boolean(NaN)')
+print('Boolean(Infinity)')
+print('Boolean({})')
 
 
-document.write('<hr/>')
-document.write('Number.EPSILON : '+ Number.EPSILON  +'<br/>')
-document.write('Number.MAX_VALUE  : '+ Number.MAX_VALUE  +'<br/>')
-document.write('Number.MIN_VALUE  : '+ Number.MIN_VALUE  +'<br/>')
-document.write('Number.MAX_SAFE_INTEGER  : '+ Number.MAX_SAFE_INTEGER  +'<br/>')
-document.write('Number.MIN_SAFE_INTEGER  : '+ Number.MIN_SAFE_INTEGER  +'<br/>')
-document.write('<hr/>')
-document.write('Number.MAX_SAFE_INTEGER+1 : '+ (Number.MAX_SAFE_INTEGER+1)+'<br/>')
-document.write('Number.MIN_SAFE_INTEGER-1  : '+ (Number.MIN_SAFE_INTEGER-1)  +'<br/>')
-document.write('Number.MAX_VALUE+1 : '+ (Number.MAX_VALUE+1)+'<br/>')
-document.write('Number.MIN_VALUE-1  : '+ (Number.MIN_VALUE-1)  +'<br/>')
-document.write('0.1+0.2 : '+ (0.1+0.2)  +'<br/>')
-document.write('0.1+0.2 : '+ (0.1+0.2-0.3<Number.EPSILON)  +'<br/>')
-document.write('<hr/>')
-document.write('Number.isFinite(NaN) : '+ (Number.isFinite(NaN))  +'<br/>')
-document.write('Number.isFinite(Infinity) : '+ (Number.isFinite(Infinity))  +'<br/>')
-document.write('Number.isNaN(NaN): '+ (Number.isNaN(NaN))  +'<br/>')
-document.write('Number.isNaN(Infinity): '+ (Number.isNaN(Infinity))  +'<br/>')
-document.write('<hr/>')
-document.write('Boolean(\'\') :'+ Boolean('')+'<br/>')
-document.write('Boolean(null) :'+ Boolean(null)+'<br/>')
-document.write('Boolean(undefined) :'+ Boolean(undefined)+'<br/>')
-document.write('Boolean(0) :'+ Boolean(0)+'<br/>')
-document.write('Boolean(NaN) :'+ Boolean(NaN)+'<br/>')
-document.write('Boolean(Infinity) :'+ Boolean(Infinity)+'<br/>')
-document.write('Boolean({}) :'+ Boolean({})+'<br/>')
-document.write('typeof (new Boolean()) :'+ typeof (new Boolean())+'<br/>')
-document.write('<hr/>')
-print(NaN==NaN)
-print(typeof (new Number()))
-print()
-print1(typeof (new String()))
+printline()
+print('NaN==NaN')
+print('typeof (new Number())')
+print('typeof (new String())')
+print('typeof (new Boolean())')
+
+print('1<2 ,4<3')
 
 
 
