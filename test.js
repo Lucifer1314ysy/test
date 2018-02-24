@@ -1,12 +1,13 @@
-//console.log('hello world')
+console.log('hello world')
 //console.log('fisrt ,javascript')
 //console.log(parseInt(10000000000000000000000008))
 //console.log(parseInt('10000000000000000000000008'))
 //本来想用<![CDATA[]],最后发现只是忽略其中的字符串
 //通过replace替代<和>
 //通过eval()显示执行结果
+//必须把&放到第一位替换
 function print(str){
-     document.write(str.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'  : '+eval(str)+'<br/>')
+     document.write(str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'  : '+eval(str)+'<br/>')
 }
 
 function printline(str){
@@ -62,7 +63,7 @@ print('typeof (new Number())')
 print('typeof (new String())')
 print('typeof (new Boolean())')
 
-print('1<2 ,4<3')
+print('1<2 ,4<3,1&2')
 
 
 
