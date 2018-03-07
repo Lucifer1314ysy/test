@@ -5,7 +5,7 @@
         <meta name="keywords" content="html" />
         <meta name="description" content="test html" />
         <meta name="author" content="yusy" />
-        <meta http-equiv="refresh" content="3" />
+        <meta http-equiv="refresh" content="10" />
         <title>这是html的练习</title>
         <base href="C:/test/">
         <link rel="stylesheet" type="text/css" href="css/html.css" />
@@ -122,5 +122,115 @@
                     <td>1548763411</td>
                 </tr>
         </table>
+        <ol>
+            <li>first</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <ol type="a">
+            <li>first</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <ol  type="A"  >
+            <li>first</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <ol  type="i"  >
+            <li>first</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <ol  type="I"  >
+            <li>first</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+
+        <ul  style="list-style-type:armenian"  >
+            <li>first</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul  style="list-style-type:upper-alpha"  >
+            <li>first</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul  style="list-style-type:square"  >
+            <li>first</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <ul  style="list-style-type:square"  >
+            <li>first</li>
+            <li>two
+                <ul  style="list-style-type:circle"  >
+                    <li>first</li>
+                    <li>two</li>
+                    <li>three</li>
+                </ul>
+            </li>
+            <li>three</li>
+        </ul>
     </body>
+    <dl>
+        <dt>1</dt>
+        <dd>first</dd>
+        <dt>2</dt>
+        <dd>second</dd>
+    </dl>
+    <div id="container"  >
+        <div id="header" style="background-color: aquamarine;width:1960px" >
+            <h1 style="margin-bottom:0;">my layout</h1>
+        </div>
+        <div id="menu" style="background: rgb(220, 220, 245);width: 260px;height:500px;float:left" >
+            html<br/>
+            css<br/>
+            html5<br/>
+            css3<br/>
+            javascript
+        </div>
+        <div id="content" style="background-color: brown;font-size:xx-large;width: 1200px;height:500px;color:darkolivegreen;float:left" >
+            this is content
+            <form>
+                <input type="text" name="text"  placeholder="placeholder" />
+                <select name="select" >
+                    <option value="select1" >1</option>
+                    <option value="select2" selected >2</option>
+                </select>
+                <input type="button" valute="button"   />
+                <fieldset>
+                    <legend  >legend sd </legend>
+
+                </fieldset>
+                <textarea rows="20" cols="100" ></textarea>
+                <select>
+                    <optgroup disabled label="1">
+                        <option>i</option>
+                        <option>a</option>
+
+                    </optgroup>
+                    <optgroup label="2"  >
+                        <option>ii</option>
+                        <option>b</option>
+                    </optgroup>
+
+                </select>
+                <input type="reset" value="reset" />
+            </form>
+
+        </div>
+        <div id="footer" style="background-color: aquamarine;width:1960px;clear:both">
+            @copy;
+        </div>
+    </div>
+    <iframe src="test.html"></iframe>
+    <hr/>
+    Non-breaking Space &amp;nbsp;
+    <blockquote>
+        this a blockquote
+        asfgg 
+    </blockquote>
 </html>
